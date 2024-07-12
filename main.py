@@ -25,9 +25,17 @@ for i in dic:
     if i["Waist to floor (cm)"] > largest_legs:
         largest_legs = i["Waist to floor (cm)"]
 sample_list = random.sample(dic, k=sample_size)
+
 for i in sample_list:
     index.append(dic.index(i))
-print(index)
+    i.update({"Index": dic.index(i)})
+
+df = pandas.DataFrame(sample_list)
+print(df)
+response = input("Would you like to export the data to excel? Y/N ")
+if response == "Y" or response == "y":
+    df.to_excel('output.xlsx', sheet_name='sheet1', index=False)
+    print(f"Results saved to: {os.path.abspath('output.xlsx')}")
 for i in sample_list:
     x.append(i["Shoulder to wrist (cm)"])
     y.append(i["Waist to floor (cm)"])
