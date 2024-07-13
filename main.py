@@ -29,7 +29,7 @@ index_list.sort()
 sample_list = []
 for i in index_list:
     item = dic[i]
-    item.update({"Index": i})
+    item.update({"Index": i+3})
     x.append(item["Shoulder to wrist (cm)"])
     y.append(item["Waist to floor (cm)"])
     sample_list.append(item)
