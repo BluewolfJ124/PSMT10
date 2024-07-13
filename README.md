@@ -9,11 +9,12 @@ Welcome to Jamie's amazing data sample sampler! This program allows you to rando
 Make sure you have the following Python packages installed:
 - `pandas`
 - `matplotlib`
+- `openpyxl`
 
 You can install these packages using pip:
 
 ```bash
-pip install pandas matplotlib
+pip install pandas matplotlib openpyxl
 ```
 
 ### Data File
