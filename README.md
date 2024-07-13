@@ -23,8 +23,12 @@ Ensure you have an Excel file named `2024 Student Data.xlsx` in the same directo
 
 ### Running the Program
 
-1. Run the program.
-2. You will be prompted to enter the size of the random sample (maximum 500). Enter a valid integer.
-3. The program will load data from the Excel file, clean it, and find the largest measurements for arms and legs.
-4. A scatter plot will be generated, showing the relationship between "Shoulder to wrist (cm)" and "Waist to floor (cm)" for the random sample.
-5. The program will also print the largest measurements found for arms and legs.
+1. Run the program:
+```bash
+python main.py
+```
+3. You will be prompted to enter the size of the random sample (maximum 500). Enter a valid integer.
+4. The program will load data from the Excel file, clean it, and find the largest measurements for arms and legs.
+5. You will have the option to export the data to excel. Enter Y for yes or N for no. The file will be save to the local directory.
+6. A scatter plot will be generated, showing the relationship between "Shoulder to wrist (cm)" and "Waist to floor (cm)" for the random sample.
+7. The program will also print the largest measurements found for arms and legs.
