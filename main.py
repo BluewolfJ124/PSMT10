@@ -1,9 +1,8 @@
 import random, os
 import pandas
 import matplotlib.pyplot as plt
-os.system('cls')
-largest_legs = 0
-largest_arms = 0
+os.system('cls') # Clear the terminal 
+largest_legs, largest_arms = 0 
 index_list = []
 print("Welcome to Jamie's amazing data sample sampler")
 while True:
