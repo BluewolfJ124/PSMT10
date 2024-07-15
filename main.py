@@ -6,12 +6,12 @@ largest_legs, largest_arms = 0, 0
 index_list = []
 print("Welcome to Jamie's amazing data sample sampler")
 while True:
-    sample_size = input("Please input the size of the random sample: ")
-    if sample_size.isalnum() == True:
-        sample_size = int(sample_size)
-        if sample_size <= 500:
-            break
-    print("Uh oh, you did not input a valid integer, please try again")
+    sample_size = input("Please input the size of the random sample: ") # Get an string input
+    if sample_size.isalnum() == True: # Check if the input is a number
+        sample_size = int(sample_size) # Set the sample size to an integer
+        if sample_size <= 500: # If the sample size is less than 500
+            break # Continue
+    print("Uh oh, you did not input a valid integer, please try again") 
 df = pandas.read_excel('2024 Student Data.xlsx',skiprows=[0]) # Load the excel data into the program, skipping the first row
 
 dic = df.to_dict('records') # Load the pandas data into a dictionary
@@ -23,7 +23,7 @@ for i in dic:
     if i["Waist to floor (cm)"] > largest_legs:
         largest_legs = i["Waist to floor (cm)"]
 x,y = [],[]
-index_list = random.sample(range(0,500), k=sample_size)
+index_list = random.sample(range(0,500), k=sample_size) #
 index_list.sort()
 sample_list = []
 for i in index_list:
