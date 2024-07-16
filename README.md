@@ -2,9 +2,9 @@
 
 Welcome to Jamie's amazing data sample sampler! This program allows you to randomly sample student data from an Excel file and visualize the relationship between "Shoulder to wrist (cm)" and "Waist to floor (cm)". 
 
-## Install the Executable
+## Option 1: Install the Executable
 
-### Downlaod
+### Download
 You can download a build of the python program if you do not have an python environment installed.
 https://github.com/BluewolfJ124/PSMT10/releases/tag/v1.0.0
 
@@ -12,7 +12,7 @@ https://github.com/BluewolfJ124/PSMT10/releases/tag/v1.0.0
 1. Unzip the file
 2. Run main.exe (it may take a while to start)
 
-## Getting Started
+## Option 2: Getting Started with Python
 
 These are the steps to run the program in python.
 
