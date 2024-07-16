@@ -1,6 +1,7 @@
 import random, os
 import pandas
 import matplotlib.pyplot as plt
+import numpy as np
 os.system('cls') # Clear the terminal 
 largest_legs, largest_arms = 0, 0
 index_list = []
@@ -32,7 +33,7 @@ for i in index_list:
     x.append(item["Shoulder to wrist (cm)"])
     y.append(item["Waist to floor (cm)"])
     sample_list.append(item)
-    
+
 df = pandas.DataFrame(sample_list)
 print(df)
 response = input("Would you like to export the data to excel? Y/N ")
@@ -41,8 +42,9 @@ if response == "Y" or response == "y":
     print(f"Results saved to: {os.path.abspath('output.xlsx')}")
 
 plt.scatter(x, y)
-plt.xlim(0, 90)
-plt.ylim(0, 140)
+plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, 1))(np.unique(x)), 'r')
+plt.xlim(40, 80)
+plt.ylim(80, 120)
 plt.xlabel("Shoulder to wrist (cm)")
 plt.ylabel("Waist to floor (cm)")
 plt.show()
